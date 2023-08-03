@@ -1,0 +1,72 @@
+Successfully sent email to Dheeraj Deokar
+Successfully sent email to Dheeraj Deokar
+Successfully sent email to Dheeraj Deokar
+Successfully sent email to Dheeraj Deokar
+Successfully sent email to Dheeraj Deokar
+Successfully sent email to Dheeraj Deokar
+Successfully sent email to Dheeraj Deokar
+INFO 2023-08-03 14:40:06 Successfully sent email to Dheeraj Deokar
+Successfully sent email to Dheeraj Deokar
+INFO 2023-08-03 14:40:06 Successfully sent email to Dheeraj Deokar
+Successfully sent email to Dheeraj Deokar
+INFO 2023-08-03 14:42:25 Successfully sent email to Dheeraj Deokar
+Successfully sent email to Dheeraj Deokar
+INFO 2023-08-03 14:42:25 Successfully sent email to Dheeraj Deokar
+INFO 2023-08-03 14:43:07 Successfully sent email to Dheeraj Deokar
+INFO 2023-08-03 14:43:07 Successfully sent email to Dheeraj Deokar
+INFO 2023-08-03 14:44:08 Successfully sent email to Dheeraj Deokar
+INFO 2023-08-03 14:44:08 Successfully sent email to Dheeraj Deokar
+INFO 2023-08-03 15:08:28 Successfully sent email to Dheeraj Deokar
+INFO 2023-08-03 15:08:28 Successfully sent email to Dheeraj Deokar
+INFO 2023-08-03 15:11:12 Successfully sent email to Dheeraj Deokar
+INFO 2023-08-03 15:11:12 Successfully sent email to Dheeraj Deokar
+INFO 2023-08-03 15:16:17 Successfully sent email to Dheeraj Deokar
+ERROR 2023-08-03 15:16:17 Error sending email to Dheeraj Deokar: NOT NULL constraint failed: emailapp_emaillog.status
+INFO 2023-08-03 15:16:22 Successfully sent email to Dheeraj Deokar
+ERROR 2023-08-03 15:16:22 Error sending email to Dheeraj Deokar: NOT NULL constraint failed: emailapp_emaillog.status
+INFO 2023-08-03 15:17:52 Successfully sent email to Dheeraj Deokar
+ERROR 2023-08-03 15:17:52 Error sending email to Dheeraj Deokar: NOT NULL constraint failed: emailapp_emaillog.status
+INFO 2023-08-03 15:17:57 Successfully sent email to Dheeraj Deokar
+ERROR 2023-08-03 15:17:57 Error sending email to Dheeraj Deokar: NOT NULL constraint failed: emailapp_emaillog.status
+INFO 2023-08-03 15:21:10 Successfully sent email to Dheeraj Deokar
+ERROR 2023-08-03 15:21:10 Error sending email to Dheeraj Deokar: NOT NULL constraint failed: emailapp_emaillog.status
+INFO 2023-08-03 15:21:15 Successfully sent email to Dheeraj Deokar
+ERROR 2023-08-03 15:21:15 Error sending email to Dheeraj Deokar: NOT NULL constraint failed: emailapp_emaillog.status
+INFO 2023-08-03 15:24:12 Successfully sent email to Dheeraj Deokar
+ERROR 2023-08-03 15:24:12 Error sending email to Dheeraj Deokar: NOT NULL constraint failed: emailapp_emaillog.status
+INFO 2023-08-03 15:24:17 Successfully sent email to Dheeraj Deokar
+ERROR 2023-08-03 15:24:17 Error sending email to Dheeraj Deokar: NOT NULL constraint failed: emailapp_emaillog.status
+INFO 2023-08-03 15:27:00 Successfully sent email to Dheeraj Deokar
+INFO 2023-08-03 15:27:00 Successfully sent email to Dheeraj Deokar
+INFO 2023-08-03 15:28:00 Successfully sent email to Dheeraj Deokar
+INFO 2023-08-03 15:28:00 Successfully sent email to Dheeraj Deokar
+INFO 2023-08-03 15:30:26 Successfully sent email to Dheeraj Deokar on Birthday
+INFO 2023-08-03 15:30:26 Successfully sent email to Dheeraj Deokar on Work Anniversary
+ERROR 2023-08-03 15:35:55 Error sending email to Dheeraj Deokar: send_mail() missing 1 required positional argument: 'from_email' on his Birthday
+ERROR 2023-08-03 15:36:00 Error sending email to Dheeraj Deokar: send_mail() missing 1 required positional argument: 'from_email' on his Birthday
+ERROR 2023-08-03 15:36:05 Error sending email to Dheeraj Deokar: send_mail() missing 1 required positional argument: 'from_email' on his Birthday
+ERROR 2023-08-03 15:36:10 Error sending email to Dheeraj Deokar: send_mail() missing 1 required positional argument: 'from_email' on his Work Anniversary
+ERROR 2023-08-03 15:36:15 Error sending email to Dheeraj Deokar: send_mail() missing 1 required positional argument: 'from_email' on his Work Anniversary
+ERROR 2023-08-03 15:36:20 Error sending email to Dheeraj Deokar: send_mail() missing 1 required positional argument: 'from_email' on his Work Anniversary
+INFO 2023-08-03 15:36:57 Successfully sent email to Dheeraj Deokar on his Birthday
+INFO 2023-08-03 15:36:57 Successfully sent email to Dheeraj Deokar on his Work Anniversary
+INFO 2023-08-03 15:49:30 Successfully sent email to Dheeraj Deokar on his Birthday
+INFO 2023-08-03 15:49:30 Successfully sent email to Dheeraj Deokar on his Work Anniversary
+ERROR 2023-08-03 15:49:55 Error sending email to Dheeraj Deokar: (534, b'5.7.9 Application-specific password required. Learn more at\n5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor f4-20020aa78b04000000b0068620bee456sm12436450pfd.209 - gsmtp') on his Birthday
+ERROR 2023-08-03 15:50:02 Error sending email to Dheeraj Deokar: (534, b'5.7.9 Application-specific password required. Learn more at\n5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor jm16-20020a17090304d000b001b3ce619e2esm14049424plb.179 - gsmtp') on his Birthday
+ERROR 2023-08-03 15:50:11 Error sending email to Dheeraj Deokar: (534, b'5.7.9 Application-specific password required. Learn more at\n5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor e6-20020a170902cf4600b001b8b2b95068sm14000505plg.204 - gsmtp') on his Birthday
+ERROR 2023-08-03 15:50:19 Error sending email to Dheeraj Deokar: (534, b'5.7.9 Application-specific password required. Learn more at\n5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor c8-20020a17090ad90800b002682392506bsm2332397pjv.50 - gsmtp') on his Work Anniversary
+ERROR 2023-08-03 15:50:26 Error sending email to Dheeraj Deokar: (534, b'5.7.9 Application-specific password required. Learn more at\n5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor y16-20020a17090264d000b001ac741dfd29sm14188757pli.295 - gsmtp') on his Work Anniversary
+ERROR 2023-08-03 15:50:35 Error sending email to Dheeraj Deokar: (534, b'5.7.9 Application-specific password required. Learn more at\n5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor i3-20020a63bf43000000b0055fead55e81sm11897992pgo.57 - gsmtp') on his Work Anniversary
+ERROR 2023-08-03 15:53:01 Error sending email to Dheeraj Deokar: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials s8-20020aa78d48000000b006661562429fsm8652271pfe.97 - gsmtp') on his Birthday
+ERROR 2023-08-03 15:53:09 Error sending email to Dheeraj Deokar: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials bx6-20020a17090af48600b00263f8915aa3sm2322888pjb.31 - gsmtp') on his Birthday
+ERROR 2023-08-03 15:53:18 Error sending email to Dheeraj Deokar: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials h2-20020a17090a3d0200b00267d9f4d340sm2513808pjc.44 - gsmtp') on his Birthday
+ERROR 2023-08-03 15:53:26 Error sending email to Dheeraj Deokar: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials ge21-20020a17090b0e1500b00268188ea4b9sm2325112pjb.19 - gsmtp') on his Work Anniversary
+ERROR 2023-08-03 15:53:34 Error sending email to Dheeraj Deokar: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials jh3-20020a170903328300b001b8b6a19bd6sm14049163plb.63 - gsmtp') on his Work Anniversary
+ERROR 2023-08-03 15:53:50 Error sending email to Dheeraj Deokar: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials x21-20020a1709027c1500b001b809082a69sm14019612pll.235 - gsmtp') on his Work Anniversary
+INFO 2023-08-03 16:03:44 Successfully sent email to Dheeraj Deokar on his Birthday
+INFO 2023-08-03 16:03:49 Successfully sent email to Dheeraj Deokar on his Work Anniversary
+INFO 2023-08-03 16:07:32 Successfully sent email to Dheeraj Deokar on his Birthday
+INFO 2023-08-03 16:07:37 Successfully sent email to Dheeraj Deokar on his Work Anniversary
+INFO 2023-08-03 16:11:02 Successfully sent email to Dheeraj Deokar on his Birthday
+INFO 2023-08-03 16:11:06 Successfully sent email to Dheeraj Deokar on his Work Anniversary
