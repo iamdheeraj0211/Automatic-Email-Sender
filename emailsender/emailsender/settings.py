@@ -10,6 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+# from celery.schedules import crontab
+from celery.schedules import crontab
+from datetime import timedelta
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -40,6 +43,8 @@ INSTALLED_APPS = [
     'emailapp',
     'rest_framework',
     'django_celery_results',
+    'django_celery_beat',
+    # 'emailapp.apps.EmailappConfig'
 ]
 
 MIDDLEWARE = [
@@ -165,12 +170,54 @@ EMAIL_HOST_PASSWORD = ''
 # }
 
 # Celery Settings
-CELERY_BROKER_URL = 'amqp://guest:guest@localhost:5672//'
-CELERY_RESULT_BACKEND = 'django-db'
+# CELERY_BROKER_URL = 'amqp://guest:guest@localhost:5672//'
+# CELERY_RESULT_BACKEND = 'django-db'
+CELERY_BROKER_URL = "redis://localhost:6379/0"
+CELERY_RESULT_BACKEND = "redis://localhost:6379/1"
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
-CELERY_TIMEZONE = 'UTC'
-
+CELERY_TIMEZONE = 'Asia/Kolkata'
 MAX_EMAIL_RETRIES = 3
 EMAIL_RETRY_DELAY = 5
+
+CELERY_BEAT_SCHEDULE = {
+    'send_email_at_9_10_pm': {
+        'task': 'emailapp.tasks.send_email_at_specific_time',
+        # Check every minute for scheduling
+        'schedule': timedelta(minutes=1),
+    },
+    'debug_task_schedule': {
+        'task': 'emailapp.tasks.debug_task_schedule',
+        'schedule': timedelta(minutes=1),
+    },
+    'print-every-thrusday': {
+        'task': 'demo_app.tasks.test',
+        'schedule': crontab(hour=23, minute=22),
+        'args': ('Its Thrusday!',)
+    },
+}
+
+CELERY_WORKER_HIJACK_ROOT_LOGGER = False
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'INFO',  # Set the desired log level
+            'class': 'logging.FileHandler',
+            # Replace with the actual path for your log file
+            'filename': 'C:/Users/DHEERAJ/Desktop/Data-Axle/emailsender/emailsender/tasks.log',
+        },
+    },
+    'loggers': {
+        'emailapp.tasks': {  # Replace 'emailapp' with the name of your Django app
+            'handlers': ['file'],
+            # Set the desired log level, can be 'DEBUG', 'INFO', 'WARNING', 'ERROR', or 'CRITICAL'
+            'level': 'INFO',
+            'propagate': True,
+        },
+    },
+}

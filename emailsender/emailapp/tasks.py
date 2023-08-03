@@ -1,4 +1,7 @@
-from models import Employee, EmployeeEvent, EmailTemplate, EmailLog
+# from celery import task
+import pytz
+from datetime import datetime, timedelta
+from .models import Employee, EmployeeEvent, EmailTemplate, EmailLog
 from django.core.mail import send_mail
 from django.core.management.base import BaseCommand
 from datetime import date
@@ -9,7 +12,7 @@ from django.conf import settings
 from celery import shared_task
 
 
-@shared_task
+# @shared_task()
 def send_event_emails():
     help = 'Send personalized emails for employee events'
     max_retries = 3
@@ -77,3 +80,41 @@ def send_event_emails():
                 f'Failed to send email to {employee.name} after {settings.MAX_EMAIL_RETRIES} attempts')
             emaillog = EmailLog.objects.create(
                 employee=event.employee, status=f'Failed to send email to {employee.name} after {settings.MAX_EMAIL_RETRIES} attempts')
+
+
+# tasks.py
+logger = logging.getLogger(__name__)
+
+
+@shared_task()
+def send_email_at_specific_time():
+    # print("function called")
+    now = datetime.now().strftime('%H:%M')
+    logger.info("Sending email task started...")
+    logger.info(f"Current time: {now}")
+    print(now)
+    print(type(now))
+    if now == "22:59":
+        logger.info("Sending scheduled email...")
+
+        subject = 'Scheduled Email'
+        message = 'This is a scheduled email sent at 8:07 PM India time.'
+        from_email = settings.EMAIL_HOST_USER
+        recipient_list = ['dheerajdeokar@gmail.com']
+
+        send_mail(subject, message, from_email, recipient_list)
+        logger.info("Sending email task completed.")
+        print("email sent")
+    # Log the email sending status or any other necessary action
+
+
+@shared_task
+def debug_task_schedule():
+
+    logger.info(
+        "Debug task scheduled. This message will be printed every minute.")
+
+
+@shared_task
+def test(message):
+    print(f"Message: {message}")
