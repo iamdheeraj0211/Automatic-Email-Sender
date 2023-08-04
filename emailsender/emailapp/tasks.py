@@ -14,8 +14,8 @@ from celery import shared_task
 
 # @shared_task()
 def send_event_emails():
-    help = 'Send personalized emails for employee events'
     max_retries = 3
+    email_retry_delay = 5
 
     today = date.today()
 
@@ -46,7 +46,7 @@ def send_event_emails():
         no_of_tries = 0
         success = False
 
-        while not success and no_of_tries < settings.MAX_EMAIL_RETRIES:
+        while not success and no_of_tries < max_retries:
 
             try:
                 send_mail(
@@ -73,13 +73,13 @@ def send_event_emails():
 
                 no_of_tries += 1
 
-                time.sleep(settings.EMAIL_RETRY_DELAY)
+                time.sleep(email_retry_delay)
 
         if not success:
             logger.error(
-                f'Failed to send email to {employee.name} after {settings.MAX_EMAIL_RETRIES} attempts')
+                f'Failed to send email to {employee.name} after {max_retries} attempts')
             emaillog = EmailLog.objects.create(
-                employee=event.employee, status=f'Failed to send email to {employee.name} after {settings.MAX_EMAIL_RETRIES} attempts')
+                employee=event.employee, status=f'Failed to send email to {employee.name} after {max_retries} attempts')
 
 
 # tasks.py

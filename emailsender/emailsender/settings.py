@@ -130,7 +130,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# settings.py
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -140,8 +139,6 @@ EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-
-# settings.py
 
 # LOGGING = {
 #     'version': 1,
@@ -169,7 +166,6 @@ EMAIL_HOST_PASSWORD = ''
 #     },
 # }
 
-# Celery Settings
 # CELERY_BROKER_URL = 'amqp://guest:guest@localhost:5672//'
 # CELERY_RESULT_BACKEND = 'django-db'
 CELERY_BROKER_URL = "redis://localhost:6379/0"
@@ -178,8 +174,7 @@ CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TIMEZONE = 'Asia/Kolkata'
-MAX_EMAIL_RETRIES = 3
-EMAIL_RETRY_DELAY = 5
+
 
 CELERY_BEAT_SCHEDULE = {
     'send_email_at_9_10_pm': {
@@ -208,14 +203,13 @@ LOGGING = {
         'file': {
             'level': 'INFO',  # Set the desired log level
             'class': 'logging.FileHandler',
-            # Replace with the actual path for your log file
+
             'filename': 'C:/Users/DHEERAJ/Desktop/Data-Axle/emailsender/emailsender/tasks.log',
         },
     },
     'loggers': {
-        'emailapp.tasks': {  # Replace 'emailapp' with the name of your Django app
+        'emailapp.tasks': {
             'handlers': ['file'],
-            # Set the desired log level, can be 'DEBUG', 'INFO', 'WARNING', 'ERROR', or 'CRITICAL'
             'level': 'INFO',
             'propagate': True,
         },
